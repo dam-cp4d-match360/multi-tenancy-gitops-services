@@ -1,0 +1,11 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  namespace: openshift-marketplace
+  name: ibm-mdm-operator-catalog
+spec:
+  image: icr.io/cpopen/mdm-operator-catalog@sha256:05e8b8a7b922176e245439c67185802d591c6a46ae00179950253ff150da6721
+  displayName: IBM Match 360
+  publisher: IBM
+  sourceType: grpc
+  imagePullPolicy: Always
