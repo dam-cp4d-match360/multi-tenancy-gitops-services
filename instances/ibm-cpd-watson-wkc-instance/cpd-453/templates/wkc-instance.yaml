@@ -1,0 +1,14 @@
+apiVersion: wkc.cpd.ibm.com/v1beta1
+kind: WKC
+metadata:
+  name: wkc-cr
+  namespace: cpd-instance
+spec:
+  license:
+    accept: true
+    license: Enterprise
+  blockStorageClass: { { include "blockStorageClass" . } }
+  fileStorageClass: { { include "fileStorageClass" . } }
+  version: { { include "cpdVersion" . } }
+  wkc_db2u_set_kernel_params: True
+  iis_db2u_set_kernel_params: True
